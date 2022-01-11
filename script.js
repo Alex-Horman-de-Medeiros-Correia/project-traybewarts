@@ -3,6 +3,8 @@ const loginPassword = document.querySelector('#password');
 const loginButton = document.querySelector('.btn-submit');
 const submitButton = document.querySelector('#submit-btn');
 const agree = document.querySelector('#agreement');
+const textArea = document.querySelector('#textarea');
+const counter = document.querySelector('#counter');
 
 function checkLogIn() {
   console.log(typeof loginPassword.value);
@@ -27,3 +29,11 @@ function checkAgreement() {
 }
 
 agree.addEventListener('click', checkAgreement);
+
+function countDown() {
+  const characters = textArea.value.length;
+  const myCounter = 500;
+  counter.innerHTML = myCounter - characters;
+}
+
+textArea.addEventListener('keyup', countDown);
