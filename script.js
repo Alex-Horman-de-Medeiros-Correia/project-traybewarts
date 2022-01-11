@@ -1,6 +1,8 @@
 const loginEmail = document.querySelector('#e-mail');
 const loginPassword = document.querySelector('#password');
-const submitButton = document.querySelector('.btn-submit');
+const loginButton = document.querySelector('.btn-submit');
+const submitButton = document.querySelector('#submit-btn');
+const agree = document.querySelector('#agreement');
 
 function checkLogIn() {
   console.log(typeof loginPassword.value);
@@ -14,4 +16,14 @@ function checkLogIn() {
   }
 }
 
-submitButton.addEventListener('click', checkLogIn);
+loginButton.addEventListener('click', checkLogIn);
+
+function checkAgreement() {
+  if (agree.checked) {
+    submitButton.removeAttribute('disabled');
+  } else {
+    submitButton.setAttribute('disabled', 'disabled');
+  }
+}
+
+agree.addEventListener('click', checkAgreement);
