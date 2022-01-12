@@ -37,7 +37,7 @@ main {
 
 #input-email {
   flex-flow: row;
-  align-items: flex-end ;
+  align-items: flex-end;
 }
 
 .rodape {
