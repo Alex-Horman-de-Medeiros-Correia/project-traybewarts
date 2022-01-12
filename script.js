@@ -9,7 +9,7 @@ const form = document.querySelector('#evaluation-form');
 const select = document.querySelector('#house');
 
 function checkLogIn() {
-  console.log(typeof loginPassword.value);
+  console.log(typeof loginPassword.value) ;
   console.log(loginEmail.value);
   if (
     loginEmail.value === 'tryber@teste.com' && loginPassword.value === '123456'
